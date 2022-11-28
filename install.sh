@@ -1,2 +1,13 @@
 #!/bin/sh
-sudo apt install -y emacs-nox ripgrep
+
+## Install system utilities.
+sudo apt install -y emacs-nox ripgrep fd-find
+
+## Install use-package for GNU Emacs, to bootstrap the packaging system.
+emacs --batch --eval "(progn (package-initialize) (add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\")) (package-refresh-contents) (package-install 'use-package))"
+
+## Move the existing dotfiles.
+for f in .gitconfig .emacs.d
+do
+    mv $f ~/
+done

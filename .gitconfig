@@ -1,0 +1,10 @@
+[alias]
+ci = commit
+co = checkout
+[core]
+	pager = cat
+[user]
+	email = abeaumont@github.com
+	name = Alfredo Beaumont
+[github]
+	user = abeaumont

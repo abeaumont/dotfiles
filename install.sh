@@ -13,7 +13,7 @@ do
 done
 
 ## use-package installation already created the directory, move individual files instead.
-for f in .emacs.d
+for f in $(ls .emacs.d)
 do
-    mv $f ~/.emacs.d/
+    mv .emacs.d/$f ~/.emacs.d/
 done

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ## Install system utilities.
-sudo apt install -y emacs-nox ripgrep fd-find
+sudo apt install -y emacs-nox ripgrep fd-find mosh
 
 ## Install use-package for GNU Emacs, to bootstrap the packaging system.
 emacs --batch --eval "(progn (package-initialize) (add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\")) (package-refresh-contents) (package-install 'use-package))"
